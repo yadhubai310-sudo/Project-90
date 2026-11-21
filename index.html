@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PROJECT 90</title>
+<meta name="theme-color" content="#0a0a0a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">PROJECT 90</div>
+      <div class="tagline">DISCIPLINE IS MEASURED BY ACTIONS.</div>
+    </header>
+
+    <main id="view-today" class="view">
+      <section class="day-summary">
+        <div id="today-date"></div>
+        <div class="progress-row">
+          <div class="progress-ring"><span id="progress-pct">0%</span></div>
+          <div class="progress-detail">
+            <div id="slots-done-count">0 / 0 slots done</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklist" class="checklist"></section>
+    </main>
+
+    <main id="view-placeholder" class="view" hidden>
+      <p class="placeholder-text"></p>
+    </main>
+
+    <div id="update-banner" class="update-banner" hidden>
+      <span>A new version is ready.</span>
+      <button id="update-reload-btn">Refresh</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-view="today">Today</button>
+    <button class="nav-btn" data-view="calendar">Calendar</button>
+    <button class="nav-btn" data-view="stats">Stats</button>
+    <button class="nav-btn" data-view="goals">Goals</button>
+  </nav>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
